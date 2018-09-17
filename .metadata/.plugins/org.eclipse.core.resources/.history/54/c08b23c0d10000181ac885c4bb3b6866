@@ -1,0 +1,46 @@
+package com.VIPS.page;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+import generic.BasePage;
+
+public class LoginPage extends BasePage {
+
+	@FindBy(name="username")
+	private WebElement unTB;
+	
+	@FindBy(name="password")
+	private WebElement pwTB;
+	
+	@FindBy(id="btn-login")
+	private WebElement loginBTN;
+	
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver,this);
+	}
+
+	public void enterUserName(String un){
+		unTB.sendKeys(un);
+	}
+	
+	public void enterPassword(String pw){
+		pwTB.sendKeys(pw);
+		
+	}
+	
+	public void clickLogin(){
+		sleep(1);
+		loginBTN.click();
+	}
+	
+
+}
+
+
+

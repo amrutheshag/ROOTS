@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.VIPS.test.orderreleasing">
+        <methods>
+          <include name="order_page"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.VIPS.test.orderreleasing -->
+      <class name="com.VIPS.test.ValidLogin">
+        <methods>
+          <include name="Login"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.VIPS.test.ValidLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

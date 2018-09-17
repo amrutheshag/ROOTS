@@ -1,0 +1,74 @@
+package com.VIPS.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import generic.BasePage;
+
+public class EnterQueuemanagerpage extends BasePage {
+
+	@FindBy(xpath="//input[@ng-model=\"showAllStatuses\"]")
+	private WebElement Show_All_Statuses;
+	
+	@FindBy(id="orderNumber")
+	private WebElement Order_Number_textbox;
+	
+	@FindBy(xpath="//button[contains(text(),'SEARCH')]")
+	private WebElement SEARCH_BTN;
+	
+	@FindBy(xpath="(//td[@class='ng-scope'])[6]")
+	private WebElement E_order_number;
+	
+	@FindBy(xpath="//a[.=' LOGOUT']")
+	private WebElement logoutLink;
+	
+	public EnterQueuemanagerpage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver,this);
+	}
+	
+	public void clickshow_all_status_Checkbox(){
+		Show_All_Statuses.click();
+	}
+
+	public void entering_Order_Number(String Order) {
+		Order_Number_textbox.sendKeys();
+	}
+	public void search_button(){
+		sleep(2);
+		SEARCH_BTN.click();
+	}
+	
+	public void checking_order_number(){
+		sleep(2);
+		E_order_number.getText();
+	}
+	
+	
+	public void verify_order_number(String E_order_number){
+		sleep(2);
+		String A_order_number=E_order_number;
+		Assert.assertEquals(A_order_number, E_order_number);
+	}
+//	public void clickCloseButton(){
+//		sleep(2);
+//		closeButton.click();
+//	}
+//	
+	public void clickLogout(){
+		sleep(2);
+		logoutLink.click();
+}
+	
+}
+
+
+
+
+
+
+
+
