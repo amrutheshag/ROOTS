@@ -1,4 +1,4 @@
-package com.VIPS.page;
+package com.roots.page;
 import java.util.Set;
 
 import javax.swing.Action;
@@ -112,18 +112,6 @@ public class EnterQueuemanagerpage extends BasePage {
 				Click_on_release_BTN.click();
 				sleep(5000);
 				
-//				Alert a=driver.switchTo().alert();
-//				a.dismiss();
-				
-//				driver.findElement(By.xpath("//button[contains(text(),'CLOSE')]")).click().click();
-//				driver.findElement(By.xpath("//div[@id='divFilters']")).click();
-			//	JavascriptExecutor jse = (JavascriptExecutor) driver;
-				//jse.executeScript(".", Close_BTN);
-				
-//				Actions action=new Actions(driver);
-//				action.moveToElement(100, 200).click();
-				
-//				Close_BTN.click();
 				sleep(4000);
 	
 				String var_A_Status=A_status.getText().toString();
@@ -135,18 +123,13 @@ public class EnterQueuemanagerpage extends BasePage {
 				//System.out.println(e);
 
 		}
-			
 			}
 					
 	public void  other_status()throws InterruptedException {
 		 try{
 			 String var2_A_Status=A_status.getText().toString();
-
-			/* if(var2_A_Status=="NEW") {
-				Reporter.log("diffren status showing--------->"+var2_A_Status,true);
-			 						}*/
 		
-	}
+		 	}
 		catch (NoSuchElementException e){
 			//System.out.println(e);
 
@@ -157,24 +140,3 @@ public class EnterQueuemanagerpage extends BasePage {
 			 System.out.println("finally working");
 		 }															}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//	public void clickLogout(){
-//		sleep(2);
-//		logoutLink.click();
-//}

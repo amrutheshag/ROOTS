@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.VIPS.test.ValidLogin">
+      <class name="com.roots.test.Gift_Card">
         <methods>
-          <include name="Login"/>
+          <include name="Credit_Card_Guest_User"/>
           <include name="openApplication"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- com.VIPS.test.ValidLogin -->
+      </class> <!-- com.roots.test.Gift_Card -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
