@@ -1,6 +1,8 @@
-package com.VIPS.test;
-import com.VIPS.page.EnterQueuemanagerpage;
+package com.roots.test;
+import com.roots.page.EnterQueuemanagerpage;
+
 import org.testng.annotations.Test;
+
 import generic.BaseTest;
 import generic.Excel;
 

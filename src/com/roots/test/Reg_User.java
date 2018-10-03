@@ -1,18 +1,21 @@
-package com.VIPS.test;
+package com.roots.test;
 
 
 import org.testng.annotations.Test;
-import com.VIPS.page.LoginPage;
+
+import com.roots.page.LoginPage;
+
 import generic.BaseTest;
 import generic.Excel;
+import generic.Retry;
 
 public class Reg_User extends BaseTest
 {
 	
-	@Test
+	@Test (retryAnalyzer=Retry.class,priority=2)
 	public void Registered_User(){
 		String un=Excel.getCellValue(XLPATH,"credentials",2,2);
-		String pw=Excel.getCellValue(XLPATH,"credentials",4,2);
+		String pw=Excel.getCellValue(XLPATH,"credentials",3,2);
 	
 		LoginPage l=new LoginPage(driver);
 		l.popup();
@@ -21,5 +24,6 @@ public class Reg_User extends BaseTest
 		l.enterUserName(un);
 		l.enterPassword(pw);
 		l.click_Signin();
+		l.click_HomePagelogo();
 	}
 }
